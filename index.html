@@ -1,0 +1,37 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Asistencia</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <img src="Logo.png" alt="Logo de la Virgen María" class="logo">
+        <h1>Registro de Asistencia</h1>
+        
+        <div class="registro-form">
+            <select id="nombre" class="nombre-select">
+                <option value="">Seleccione un participante</option>
+            </select>
+            <input type="date" id="fechaRegistro" class="fecha-input">
+            <button id="btnRegistrar" onclick="registrarParticipante()">Registro de Asistencia</button>
+            <button id="btnDescargar" onclick="descargarAsistencia()" class="btn-descargar">Descargar Lista de Asistencia</button>
+        </div>
+
+        <div class="tabla-container">
+            <table id="tablaAsistencia">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaBody">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script type="module" src="config.js"></script>
+    <script type="module" src="script.js"></script>
+</body>
+</html>
