@@ -1,0 +1,40 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Asistencia</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Load XLSX before your script -->
+    <script src="https://cdn.sheetjs.com/xlsx-0.20.1/package/dist/xlsx.full.min.js"></script>
+    <!-- Remove the importmap since we're not using ES modules for XLSX -->
+    <script type="module" src="config.js"></script>
+</head>
+<body>
+    <div class="container">
+        <img src="Logo.png" alt="Logo de la Virgen María" class="logo">
+        <h1>Registro de Asistencia</h1>
+        
+        <div class="registro-form">
+            <select id="nombre" class="nombre-select">
+                <option value="">Seleccione un participante</option>
+            </select>
+            <input type="date" id="fechaRegistro" class="fecha-input">
+            <button id="btnRegistrar" onclick="registrarParticipante()">Registro de Asistencia</button>
+            <button id="btnDescargar" onclick="descargarAsistencia()" class="btn-descargar">Descargar Lista de Asistencia</button>
+        </div>
+
+        <div class="tabla-container">
+            <table id="tablaAsistencia">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaBody">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script type="module" src="script.js"></script>
+</body>
+</html>
